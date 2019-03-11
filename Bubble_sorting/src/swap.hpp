@@ -1,2 +1,0 @@
-
-void swap (int&, int&);

@@ -1,4 +1,4 @@
-all:  bin/Bubble_sort
+all:  bin/Selection_sort
 
 SOURCES := $(wildcard src/*cpp)
 OBJECTS := $(patsubst src/%.cpp, obj/%.o, $(SOURCES))
@@ -8,7 +8,7 @@ obj/%.o : src/%.cpp ./obj
 ./obj: 
 	mkdir -p obj
 
-bin/Bubble_sort : $(OBJECTS) ./bin
+bin/Selection_sort : $(OBJECTS) ./bin
 	g++ $(OBJECTS) -o $@
 
 ./bin:
