@@ -58,7 +58,6 @@ int get_size()
 		    }
 	    } 
 	}
-        
 	if (s[0] == '0') {
 	   f = true;
 	   std::cout <<"Error: Please enter more than zero.\n";

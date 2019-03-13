@@ -1,3 +1,5 @@
-void merge_asc(int arr[], int l, int m, int r);
-void merge_desc(int arr[], int l, int m, int r);
-void merge_sort(int arr[], int l, int r, int button);
+void merge_asc_desc(int*, int, int, int, int);
+void support_1(int*, int*, int, int, int);
+void merge_sort(int*, int, int, int);
+//void support_2(int*, int*, int*, int, int, int);
+

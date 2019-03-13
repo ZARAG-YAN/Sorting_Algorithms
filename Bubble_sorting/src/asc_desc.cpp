@@ -12,7 +12,7 @@ void asc_desc(int arr[], int size, int button)
 {
     for (int i = 0; i < size ; ++i) {
         for (int j = 0; j < size - 1; ++j) {
-	    if (button == 1){
+	    if (button == 1) {
                if (arr[j] > arr[j + 1]) {
                    swap(&arr[j], &arr[j+1]);
                }
