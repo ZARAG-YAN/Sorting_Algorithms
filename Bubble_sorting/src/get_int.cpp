@@ -16,9 +16,14 @@ int get_num()
                     if (s[i] == '.') {
 			std::cout<<"Input will be considered as integer.\n";
 			check = false;
-                    } else if ( s[i] < '0'|| s[i] > '9') {
-                        std::cout << "Error:It will be confused as zero.\n";
-                        break;
+                    } else if (s[i] < '0'|| s[i] > '9') {
+			if (s[i] == ' ') {
+			    std::cout <<"The numbers after the first digit are ignored.\n";
+			    break;
+			} else {
+                            std::cout << "Error:It will be confused as zero.\n";
+                            break;
+			}
                     }
                 }
             }
@@ -36,7 +41,7 @@ int get_size()
     while (f) {
 	getline(std::cin, s);
 	f = false;
-	if(s[0] == '-') {
+	if (s[0] == '-') {
 	    for(int i = 0; i < s.size(); ++i) {
 	        if (s[i] < '0' || s[i] > '9') {
 		    f = true;
@@ -47,16 +52,16 @@ int get_size()
 	    for (int i = 0; i < s.size(); ++i) {
 	        if (s[i] == '.') {
 		    std::cout <<"In cosidered integer.\n";
-		} else if ( s[i] < '0'|| s[i] > '9') {
+		} else if (s[i] < '0'|| s[i] > '9') {
 		        std::cout <<"Error: Please input number.\n";
 		        f = true;
 		    }
 	    } 
 	}
         
-	if( s[0] == '0') {
-	f = true;
-	std::cout <<"Error: Please enter more than zero.\n";
+	if (s[0] == '0') {
+	   f = true;
+	   std::cout <<"Error: Please enter more than zero.\n";
 	}
     }
     std::stringstream str_to_int (s);

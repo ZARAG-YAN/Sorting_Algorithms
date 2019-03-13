@@ -1,33 +1,25 @@
 #include <iostream>
 #include "asc_desc.hpp"
 
-void swap ( int* a, int* b)
+void swap(int* a, int* b)
 {
         int tmp = *a;
         *a = *b;
         *b = tmp;
 }
 
-void asc_order (int arr[], int size)//achman
+void asc_desc(int arr[], int size, int button)
 {
     for (int i = 0; i < size ; ++i) {
         for (int j = 0; j < size - 1; ++j) {
-            if (arr[j] > arr[j + 1]) {
-                swap (&arr[j], &arr[j+1]);
-            }
+	    if (button == 1){
+               if (arr[j] > arr[j + 1]) {
+                   swap(&arr[j], &arr[j+1]);
+               }
+	    } else if (arr[j] < arr[j + 1]) {
+                      swap(&arr[j], &arr[j + 1]);
+	    }
         }
     }   
     std::cout << "\nSort array in Ascending Order \n";
-}
-
-void desc_order (int arr[], int size)
-{
-    for (int i = 0; i < size; ++i) {    
-        for (int j = 0; j < size - 1; ++j) {
-            if (arr[j] < arr[j + 1]) {
-                swap (&arr[j], &arr[j + 1]);
-	    }
-	}
-    }  
-    std::cout << "\nSort array in Descending Order \n";
 }
