@@ -1,0 +1,2 @@
+obj/main.dep obj/main.o: src/main.cpp src/print_array.hpp \
+ src/asc_desc.hpp src/get_int.hpp

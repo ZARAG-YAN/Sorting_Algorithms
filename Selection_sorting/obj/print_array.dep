@@ -1,0 +1,2 @@
+obj/print_array.dep obj/print_array.o: src/print_array.cpp \
+ src/print_array.hpp
