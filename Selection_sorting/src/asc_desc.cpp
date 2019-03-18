@@ -7,7 +7,7 @@ void swap(int* a, int* b)
         *a = *b;
         *b = tmp;
 }
-void asc_order(int arr[], int size)
+void asc_order(int arr[], const int& size)
 {
     for (int i = 0; i < size - 1; ++i) {
         int min_index = i; 
@@ -20,7 +20,7 @@ void asc_order(int arr[], int size)
     }
     std::cout << "\nSort array in Ascending Order \n";
 }
-void desc_order(int arr[], int size)
+void desc_order(int arr[], const int& size)
 {
     for (int i = 0; i < size - 1; ++i) {
         int max_index = i;

@@ -5,7 +5,7 @@
 
 int main()
 {   std::cout <<"\n\t**** Merge sorting algorithm ****\n\n";
-    std::cout << "Enter array size.\n";
+    std::cout << "Please enter array size in range of [1, 100].\n";
     int arr_size = get_size();
     while (arr_size > 100) {
         std::cout <<"Your input is out of range.\n";

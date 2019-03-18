@@ -1,5 +1,6 @@
-#include <iostream>
 #include "get_int.hpp"
+#include <iostream>
+#include <cstring>
 #include <sstream>
 
 int get_num()
@@ -7,12 +8,14 @@ int get_num()
     std::string s("");
     bool check = false;
     int integer = 0;
+    int size = 0;
     do {
         getline(std::cin, s);
+        size = s.size();
         if (s[0] == '-') {
             check = false;
         } else {
-             for (int i = 0; i < s.size(); ++i) {
+             for (int i = 0; i < size; ++i) {
                 if (s[i] == '.') {
                      std::cout<<"Input will be considered as integer.\n";
                      check = false;
@@ -37,19 +40,20 @@ int get_size()
 {   std::string s;
     bool f = true;
     int integer = 0;
-
+    int size = 0;
     while (f) {
         getline(std::cin, s);
+        size = s.size();
         f = false;
         if (s[0] == '-') {
-            for(int i = 0; i < s.size(); ++i) {
+            for(int i = 0; i < size; ++i) {
                 if (s[i] < '0' || s[i] > '9') {
                     f = true;
                     std::cout <<"Error: Please input number.\n";
                 }
             }
         } else {
-            for (int i = 0; i < s.size(); ++i) {
+            for (int i = 0; i < size; ++i) {
                 if (s[i] == '.') {
                     std::cout <<"In cosidered integer.\n";
                 } else if (s[i] < '0'|| s[i] > '9') {

@@ -1,6 +1,6 @@
 #include "merge_asc_desc.hpp"
 
-void merge_asc_desc(int arr[], int l, int m, int r, int button)  
+void merge_asc_desc(int arr[], const int& l, int m, const int& r, const int& button)  
 { 
     int i, j, k;
     int len1 = m - l + 1;  
@@ -59,7 +59,7 @@ void support_1(int arr[], int sub_arr[], int lenght, int index, int k)
     }
 }
 
-void merge_sort(int arr[], int l, int r, int button)
+void merge_sort(int arr[], const int& l, const int& r, const int& button)
 {
     if (l < r) {
         int m = l + (r - l) / 2;
@@ -68,4 +68,3 @@ void merge_sort(int arr[], int l, int r, int button)
 	merge_asc_desc(arr, l, m, r, button);
     }
 }
-

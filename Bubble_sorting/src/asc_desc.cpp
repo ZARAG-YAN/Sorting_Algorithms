@@ -8,7 +8,7 @@ void swap(int* a, int* b)
         *b = tmp;
 }
 
-void asc_desc(int arr[], int size, int button)
+void asc_desc(int arr[], const int& size, const int& button)
 {
     for (int i = 0; i < size ; ++i) {
         for (int j = 0; j < size - 1; ++j) {

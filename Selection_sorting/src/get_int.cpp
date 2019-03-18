@@ -8,21 +8,22 @@ int get_num()
     bool check = false;
     int integer = 0;
     do {
-            getline(std::cin, s);
-            if (s[0] == '-') {
-                check = false;
-            } else {
-                for (int i = 0; i < s.size(); ++i) {
-                    if (s[i] == '.') {
-			std::cout<<"Input will be considered as integer.\n";
-			check = false;
-                    } else if ( s[i] < '0'|| s[i] > '9') {
-                        std::cout << "Error:It will be confused as zero.\n";
-                        break;
-                    }
-                }
-            }
-        } while (check);
+	getline(std::cin, s);
+	int size = s.size();
+	if (s[0] == '-') {
+	    check = false;
+	} else {
+	    for (int i = 0; i < size; ++i) {
+		if (s[i] == '.') {
+		    std::cout<<"Input will be considered as integer.\n";
+		    check = false;
+		} else if ( s[i] < '0'|| s[i] > '9') {
+		    std::cout << "Error:It will be confused as zero.\n";
+		    break;
+		}
+	    }
+	}
+    } while (check);
     std::stringstream str_to_int (s);
     str_to_int >> integer;
     return integer;
@@ -35,16 +36,17 @@ int get_size()
 
     while (f) {
 	getline(std::cin, s);
+        int size = s.size();
 	f = false;
 	if(s[0] == '-') {
-	    for(int i = 0; i < s.size(); ++i) {
+	    for(int i = 0; i < size; ++i) {
 	        if (s[i] < '0' || s[i] > '9') {
 		    f = true;
 		    std::cout <<"Error: Please input positive number.\n";
 		}
 	    }
 	} else {
-	    for (int i = 0; i < s.size(); ++i) {
+	    for (int i = 0; i < size; ++i) {
 	        if (s[i] == '.') {
 		    std::cout <<"In cosidered integer.\n";
 		} else if ( s[i] < '0'|| s[i] > '9') {
@@ -53,10 +55,9 @@ int get_size()
 		    }
 	    } 
 	}
-        
 	if( s[0] == '0') {
-	f = true;
-	std::cout <<"Error: Please enter more than zero.\n";
+	    f = true;
+	    std::cout <<"Error: Please enter more than zero.\n";
 	}
     }
     std::stringstream str_to_int (s);

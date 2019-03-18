@@ -6,7 +6,7 @@ void swap(int* a, int* b)
     *a = *b;
     *b = tmp;
 }
-int partition(int arr[], int start, int end)
+int partition(int arr[], const int& start, const int& end)
 {
     int pivot = arr[end];
     int i = start - 1;
@@ -18,7 +18,7 @@ int partition(int arr[], int start, int end)
     } swap(&arr[i + 1], &arr[end]);
     return i + 1;
 }
-void quickSort(int arr[], int start, int end)
+void quickSort(int arr[], const int& start, const int& end)
 {
     if (start < end) {
     int index = partition(arr, start, end);
