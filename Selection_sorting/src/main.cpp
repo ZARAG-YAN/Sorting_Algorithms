@@ -8,6 +8,10 @@ int main ()
 {       std::cout <<"\n\t**** Selection sorting algorithm ****\n\n";
 	std::cout <<"Enter please array size >>> ";
 	int size = get_size();
+    while (size > 100) {
+        std::cout <<"Your input is out of range.\n";
+        size = get_size();
+    }
 	int arr[size];
 	int button = 0;
 	std::cout << "Please input array \n";
@@ -21,6 +25,6 @@ int main ()
 	    asc_order(arr, size);
 	} else desc_order(arr, size);
 	print_array(arr, size);
-  
+
     return 0;
 }

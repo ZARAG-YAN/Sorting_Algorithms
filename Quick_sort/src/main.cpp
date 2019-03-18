@@ -7,6 +7,10 @@ int main()
 {   std::cout <<"\n\t**** Quick_sort algorithm ****\n\n";
     std::cout << "Enter array size.\n";
     int arr_size = get_size();
+    while (arr_size > 100) {
+        std::cout <<"Your input is out of range.\n";
+        arr_size = get_size();
+    }
     std::cout << "Eneter array elements.\n";
     int arr[arr_size];
     for (int i = 0; i < arr_size; ++i) {

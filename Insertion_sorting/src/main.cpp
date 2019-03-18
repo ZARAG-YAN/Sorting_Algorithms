@@ -5,8 +5,12 @@
 
 int main()
 {   std::cout << "\n\t**** Insertion sorting algorithm ****\n\n";
-    std::cout << "Please input array size.\n"; 
+    std::cout << "Please input array size.\n";
     int size = get_size();
+    while (size > 100) {
+        std::cout <<"Your input is out of range.\n";
+        size = get_size();
+    }
     int arr[size];
     std::cout << "Please input array.\n";
     for (int i = 0; i < size; ++i) {
@@ -16,7 +20,7 @@ int main()
     std::cout << "\nIf you want to sort array to Ascending order press 1.\n";
     std::cout << "Otherwise it will be sorted Descending order.\n";
     int button = get_num();
-    asc_desc(arr, size, button); 
+    asc_desc(arr, size, button);
     print_array(arr, size);
     return 0;
 }

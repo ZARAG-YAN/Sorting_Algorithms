@@ -1,1 +1,0 @@
-obj/get_int.dep obj/get_int.o: src/get_int.cpp src/get_int.hpp
