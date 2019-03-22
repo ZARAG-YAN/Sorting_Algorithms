@@ -3,6 +3,7 @@
 #include <cstring>
 #include <sstream>
 
+//string transform integer and return result.
 int get_num()
 {
     std::string s("");
@@ -12,7 +13,7 @@ int get_num()
     do {
         getline(std::cin, s);
         size = s.size();
-        if (s[0] == '-') {
+        if (s[0] == '-' || s[0] == '+') {
             check = false;
         } else {
              for (int i = 0; i < size; ++i) {
@@ -36,6 +37,7 @@ int get_num()
     return integer;
 }
 
+//Get array size.
 int get_size()
 {   std::string s;
     bool f = true;

@@ -1,1 +1,2 @@
-void print_array(int*, int);
+
+void print_array (const int[], const int&);

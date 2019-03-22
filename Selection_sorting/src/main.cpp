@@ -21,9 +21,7 @@ int main ()
     std::cout <<"Press 1 if you want to sort array in ascending ordered.";
     std::cout <<"\nOtherwise it will be sorted by descending order. ";
     button = get_num();
-    if (button == 1) {
-        asc_order(arr, size);
-    } else desc_order(arr, size);
+    asc_desc(arr, size, button);
 	print_array(arr, size);
     return 0;
 }

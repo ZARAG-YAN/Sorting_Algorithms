@@ -19,7 +19,7 @@ int main()
     std::cout << "If you want to sort array ascending order press 1.\n";
     std::cout << "Otherwise it will be sorted descending order.\n";
     int button = get_num();
-    quickSort(arr, 0, arr_size - 1);
+    quickSort(arr, 0, arr_size - 1, button);
     std::cout <<"\nSorted array is.\n";
     print_array(arr, arr_size);
     return 0;

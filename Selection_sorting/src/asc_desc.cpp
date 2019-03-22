@@ -1,5 +1,6 @@
 #include <iostream>
 #include "asc_desc.hpp"
+#include <cassert>
 
 void swap(int* a, int* b)
 {
@@ -7,29 +8,22 @@ void swap(int* a, int* b)
         *a = *b;
         *b = tmp;
 }
-void asc_order(int arr[], const int& size)
+void asc_desc(int arr[], const int& size, const int& button)
 {
     for (int i = 0; i < size - 1; ++i) {
-        int min_index = i; 
+        int min_max_index = i;
         for (int j = i + 1; j < size; ++j) {
-            if (arr[j] < arr[min_index]) {
-                min_index = j;
+            if (button == 1) {
+               if (arr[j] < arr[min_max_index]) {
+                   min_max_index = j;
+               }
+            } else if (arr[j] > arr[min_max_index]) {
+                min_max_index = j;
             }
         }
-        swap(&arr[i], &arr[min_index]);
+        assert(arr[i]);
+        assert(arr[min_max_index]);
+        swap(&arr[i], &arr[min_max_index]);
     }
     std::cout << "\nSort array in Ascending Order \n";
-}
-void desc_order(int arr[], const int& size)
-{
-    for (int i = 0; i < size - 1; ++i) {
-        int max_index = i;
-        for (int j = i + 1; j < size; ++j) {
-            if (arr[j] > arr[max_index]) {
-                max_index = j;
-            }
-        }
-        swap(&arr[i], &arr[max_index]);
-    }
-    std::cout << "\nSort array in Descending Order \n";
 }

@@ -1,9 +1,9 @@
-#include <iostream>
 #include "print_array.hpp"
-void print_array(int a[], int size)
+#include <iostream>
+void print_array (const int arr[], const int& size)
 {
-    for (int i = 0; i < size; ++i) {
-        std::cout << a[i] << " ";
-    }   std::cout <<"\n\n";
+        for (int i = 0; i < size; ++i) {
+                std::cout << arr[i] << " ";
+        }
+        std::cout << std::endl;
 }
-

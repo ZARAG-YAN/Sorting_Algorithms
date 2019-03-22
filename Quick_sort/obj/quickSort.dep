@@ -1,0 +1,1 @@
+obj/quickSort.dep obj/quickSort.o: src/quickSort.cpp inc/quickSort.hpp

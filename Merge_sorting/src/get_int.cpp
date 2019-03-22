@@ -9,7 +9,7 @@ int get_num()
     do {
 	getline(std::cin, s);
         int size = s.size();
-	if (s[0] == '-') {
+	if (s[0] == '-' || s[0] == '+') {
 	    check = false;
 	} else {
 	    for (int i = 0; i < size; ++i) {

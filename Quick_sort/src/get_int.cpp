@@ -10,7 +10,7 @@ int get_num()
     do {
          getline(std::cin, s);
          int size = s.size();
-         if (s[0] == '-') {
+         if (s[0] == '-' || s[0] == '+') {
             check = false;
          } else {
             for (int i = 0; i < size; ++i) {
@@ -21,7 +21,7 @@ int get_num()
                    if (s[i] == ' ') {
                        std::cout << "The numbers after the first digit are ignored.\n";
                        break;
-                   } else { 
+                   } else {
                        std::cout << "Error:It will be confused as zero.\n";
                        break;
                    }
